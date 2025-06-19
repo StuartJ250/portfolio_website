@@ -21,14 +21,32 @@
   -moz-osx-font-smoothing: grayscale;
   --soft-teal: #64D6C0;
   --soft-purple: #A288E3;
+  --dark-teal: #258d79;
+  --dark-purple: #3b3c91;
 }
 
 .text-soft-teal{
   color: var(--soft-teal);
 }
 
+.text-dark-teal{
+  color: var(--dark-teal)
+}
+
+.text-dark-purple{
+  color: var(--dark-purple);
+}
+
 .text-soft-purple{
   color: var(--soft-purple);
+}
+
+.bg-dark-teal{
+  background-color: var(--dark-teal)
+}
+
+.bg-dark-purple{
+  background-color: var(--dark-purple);
 }
 
 .bg-soft-purple{
@@ -94,7 +112,53 @@ button:focus-visible {
 /*  }*/
 /*}*/
 
+
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 
+@keyframes fill-25 {
+  from { width: 0%; }
+  to { width: 25%; }
+}
+@keyframes fill-50 {
+  from { width: 0%; }
+  to { width: 50%; }
+}
+@keyframes fill-75 {
+  from { width: 0%; }
+  to { width: 75%; }
+}
+@keyframes fill-100 {
+  from { width: 0%; }
+  to { width: 100%; }
+}
 
+
+.fill-25 {
+  animation: fill-25 1.2s ease-out forwards;
+}
+.fill-50 {
+  animation: fill-50 1.2s ease-out forwards;
+}
+.fill-75 {
+  animation: fill-75 1.2s ease-out forwards;
+}
+.fill-100 {
+  animation: fill-100 1.2s ease-out forwards;
+}
 
