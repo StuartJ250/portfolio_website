@@ -34,7 +34,7 @@ const Projects = () => {
                              className="bg-gray-300 dark:bg-gray-900 rounded-xl p-6 shadow hover:shadow-lg transition-all duration 300 flex flex-col justify-between"
                         >
                             <div>
-                                <h3 className="text-xl font-semibold text-dark-teal dark:text-soft-teal mb-2">{project.title}</h3>
+                                <h3 className="text-xl font-semibold text-soft-teal mb-2">{project.title}</h3>
                                 <p className="text-sm text-gray-700 dark:text-gray-300">{project.description}</p>
                             </div>
                             <div className="mt-4">

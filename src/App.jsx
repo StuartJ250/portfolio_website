@@ -1,9 +1,9 @@
 import React from 'react'
 import Hero from './components/Hero.jsx'
-import Header from './components/Header.jsx'
 import Navbar from "./components/Navbar.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
+import Contact from "./components/Contact.jsx";
 
 const App = () => {
     return (
@@ -12,6 +12,7 @@ const App = () => {
             <Hero />
             <Skills />
             <Projects />
+            <Contact />
         </div>
     )
 }

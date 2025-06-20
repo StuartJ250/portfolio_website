@@ -10,10 +10,8 @@
 #root {
   margin: 0 auto;
   text-align: center;
-  --soft-teal: #64D6C0;
-  --soft-purple: #A288E3;
-  --dark-teal: #258d79;
-  --dark-purple: #3b3c91;
+  --soft-teal: #258d79;
+  --soft-purple: #3b3c91;
   --background: #fff;
   --border: #000;
   --text: #1a1a1a;
@@ -35,6 +33,10 @@
 
 body{
   font-family: 'Poppins', sans-serif;
+}
+
+.ring-soft-teal{
+  color:var(--soft-teal);
 }
 
 .text-soft-teal{
@@ -157,4 +159,8 @@ body{
 }
 .fill-100 {
   animation: fill-100 1.2s ease-out forwards;
+}
+
+input:focus{
+  outline-color: var(--soft-teal);
 }

@@ -19,10 +19,35 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --soft-teal: #258d79;
+  --soft-purple: #3b3c91;
+}
+
+.dark{
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   --soft-teal: #64D6C0;
   --soft-purple: #A288E3;
   --dark-teal: #258d79;
   --dark-purple: #3b3c91;
+  --background: #000;
+  --border: #fff;
+  --text: #7b7b7b;
+  --muted: #fff;
+}
+
+.ring-soft-teal{
+  border-color:var(--soft-teal);
 }
 
 .text-soft-teal{
@@ -66,6 +91,13 @@ a:hover {
   color: var(--soft-purple);
 }
 
+button:hover{
+  background-color: var(--soft-teal);
+}
+
+.focus\:ring-soft-teal:focus {
+  --tw-ring-color: var(--soft-teal);
+}
 body {
   margin: 0;
   display: flex;
@@ -87,7 +119,6 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
 }

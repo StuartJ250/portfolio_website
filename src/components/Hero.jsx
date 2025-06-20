@@ -20,7 +20,7 @@ const Hero = () => {
     const isInView = useInView(ref, { once: true});
 
     return (
-        <section id="hero" ref={ref} className=" min-w-screen min-h-screen flex items-center justify-center px-6 bg-white dark:bg-black transition-colors duration-300">
+        <section id="hero" ref={ref} className=" min-w-screen min-h-screen flex items-center justify-center pt-10 px-6 bg-white dark:bg-black transition-colors duration-300">
             <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
                 {/* Content for Hero Starts here*/}
                 <motion.div className="text-center md:text-left" variants={textVariant} initial="hidden" animate={isInView ? 'visible':'hidden'}>

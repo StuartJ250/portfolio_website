@@ -38,9 +38,9 @@ const Skills = () => {
                                 }`}
                             >
                                 {/* Front */}
-                                <div className="absolute inset-0 bg-gray-300 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden backface-hidden flex flex-col justify-center items-center">
-                                    <div className="opacity-70 dark:opacity-40 text-6xl text-dark-teal dark:text-soft-teal mb-2">{skill.icon}</div>
-                                    <div className="text-dark-teal dark:text-soft-teal text-lg font-semibold">{skill.name}</div>
+                                <div className="absolute inset-0 bg-gray-300 dark:bg-gray-900 rounded-lg shadow-md overflow-hidden backface-hidden flex flex-col justify-center items-center hover:shadow-2xl hover:scale-105 hover:z-10">
+                                    <div className="opacity-70 dark:opacity-40 text-6xl text-soft-teal mb-2 group-hover:opacity-90 group-hover:scale-110">{skill.icon}</div>
+                                    <div className="opacity-70 text-soft-teal text-lg font-semibold group-hover:scale-110 group-hover:drop-shadow-xl">{skill.name}</div>
                                 </div>
 
                                 {/*Back*/}
