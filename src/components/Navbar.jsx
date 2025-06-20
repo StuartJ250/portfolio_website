@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from 'react'
-import {MoonIcon, SunIcon} from "@heroicons/react/16/solid/index.js";
+
+import {MoonIcon, SunIcon, Bars3Icon, XMarkIcon} from "@heroicons/react/16/solid";
 
 const Navbar = () => {
+
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const [isDarkMode, setIsDarkMode] = useState(() => {
         const stored = localStorage.getItem('theme');
@@ -25,13 +28,14 @@ const Navbar = () => {
         <nav className="w-full bg-white dark:bg-black p-1 fixed top-0 left-0 z-40">
             <div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
                 {/* Logo Link */}
-                <a href="#top" className="text-4xl font-extrabold  text-soft-teal dark:text-soft-teal">
+                <a href="#top" className=" text-sm md:text-4xl font-extrabold text-soft-teal dark:text-soft-teal">
                     <img src="src/assets/logos/SJLogo2.png"
                     alt="Logo"
-                    className="rounded-full h-20 w-auto object-contain" />
+                    className="rounded-full h-10 md:h-20 w-auto object-contain" />
                 </a>
-                {/* NAV LINKS */}
-                <ul className="flex gap-6 text-lg text-shadow-md text-gray-700 dark:text-gray-300 font-medium">
+                {/* NAV DESKTOP LINKS */}
+                <ul className="hidden md:flex gap-6 text-lg text-shadow-md text-gray-700 dark:text-gray-300 font-medium">
+                    <li><a href="#top">Home</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact Me!</a></li>
@@ -56,7 +60,26 @@ const Navbar = () => {
                             </span>
                     </label>
                 </div>
+
+                {/* NAV Mobile LINKS */}
+                <div className="md:hidden bg-gray-300 dark:bg-gray-900 rounded-lg ">
+                    <button onClick={() => setMenuOpen((prev) => !prev)}>
+                        {menuOpen ? (
+                            <XMarkIcon className="h-6 w-6 text-soft-teal"/>
+                        ) : (
+                            <Bars3Icon className="h-6 w-6 text-soft-teal"/>
+                        )}
+                    </button>
+                </div>
             </div>
+            {menuOpen && (
+                <div className="md:hidden mt-2 space-y-2 bg-white dark:bg-black p-4 rounded shadow transition-all">
+                    <a href="#top" onClick={() => setMenuOpen(false)} className="block text-gray-800 dark:text-gray-200 hover:text-softPurple">Home</a>
+                    <a href="#skills" onClick={() => setMenuOpen(false)} className="block text-gray-800 dark:text-gray-200 hover:text-softPurple">Skills</a>
+                    <a href="#projects" onClick={() => setMenuOpen(false)} className="block text-gray-800 dark:text-gray-200 hover:text-softPurple">Projects</a>
+                    <a href="#contact" onClick={() => setMenuOpen(false)} className="block text-gray-800 dark:text-gray-200 hover:text-softPurple">Contact</a>
+                </div>
+            )}
         </nav>
     )
 }
