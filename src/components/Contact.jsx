@@ -75,7 +75,7 @@ const Contact = () => {
 
                     {/*Name*/}
                     <div>
-                        <label htmlFor="name" className="block text-lg font-medium text-black dark:text-white">
+                        <label htmlFor="name" className="block text-md md:text-lg font-medium text-black dark:text-white">
                             Name:
                         </label>
                         <input required
@@ -90,7 +90,7 @@ const Contact = () => {
 
                     {/*Company form*/}
                     <div>
-                        <label htmlFor="company" className="block text-lg font-medium text-black dark:text-white">
+                        <label htmlFor="company" className="block text-md md:text-lg font-medium text-black dark:text-white">
                             Company:
                         </label>
                         <input
@@ -105,7 +105,7 @@ const Contact = () => {
 
                     {/*Email form*/}
                     <div>
-                        <label htmlFor="email" className="block text-lg font-medium text-black dark:text-white">
+                        <label htmlFor="email" className="block text-md md:text-lg font-medium text-black dark:text-white">
                             Email:
                         </label>
                         <input required
@@ -119,7 +119,7 @@ const Contact = () => {
                     </div>
                     {/*Message text area*/}
                     <div>
-                        <label htmlFor="message" className="block text-lg font-medium text-black dark:text-white">
+                        <label htmlFor="message" className="block text-md md:text-lg font-medium text-black dark:text-white">
                             Message:
                         </label>
                         <textarea required

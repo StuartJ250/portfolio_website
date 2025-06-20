@@ -20,7 +20,7 @@ const Hero = () => {
     const isInView = useInView(ref, { once: true});
 
     return (
-        <section id="hero" ref={ref} className=" min-w-screen min-h-screen flex items-center justify-center pt-10 px-6 bg-white dark:bg-black transition-colors duration-300">
+        <section id="hero" ref={ref} className=" min-w-screen min-h-screen flex items-center justify-center scroll-mt-24 py-6 px-6 bg-white dark:bg-black transition-colors duration-300">
             <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
                 {/* Content for Hero Starts here*/}
                 <motion.div className="text-center md:text-left" variants={textVariant} initial="hidden" animate={isInView ? 'visible':'hidden'}>
@@ -28,15 +28,15 @@ const Hero = () => {
                     <p className="text-xl md:text-2xl font-bold text-black dark:text-gray-300">
                         Hi! My name is
                     </p>
-                    <h1 className="text-soft-teal text-4xl md:text-5xl font-extrabold mb-0">
+                    <h1 className="text-soft-teal text-2xl md:text-5xl font-extrabold mb-0">
                         Stuart Jacobson
                     </h1>
 
-                    <h2 className="text-xl md:text-2xl font-bold text-gray-600 dark:text-gray-300 mb-10">
+                    <h2 className="text-lg md:text-2xl font-bold text-gray-600 dark:text-gray-300 mb-10">
                         Software Engineer & Developer
                     </h2>
 
-                    <p className="max-w-xl text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                    <p className="text-sm md:text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                         I like to learn new things and make stuff. <br />
                         Associates of Business<br />
                         Bachelor of Science - Software Engineering <br />

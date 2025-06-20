@@ -28,10 +28,10 @@ const Navbar = () => {
         <nav className="w-full bg-white dark:bg-black p-1 fixed top-0 left-0 z-40">
             <div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
                 {/* Logo Link */}
-                <a href="#top" className=" text-sm md:text-4xl font-extrabold  text-soft-teal dark:text-soft-teal">
+                <a href="#top" className=" text-sm md:text-4xl font-extrabold text-soft-teal dark:text-soft-teal">
                     <img src="src/assets/logos/SJLogo2.png"
                     alt="Logo"
-                    className="rounded-full h-20 w-auto object-contain" />
+                    className="rounded-full h-10 md:h-20 w-auto object-contain" />
                 </a>
                 {/* NAV DESKTOP LINKS */}
                 <ul className="hidden md:flex gap-6 text-lg text-shadow-md text-gray-700 dark:text-gray-300 font-medium">
@@ -62,7 +62,7 @@ const Navbar = () => {
                 </div>
 
                 {/* NAV Mobile LINKS */}
-                <div className="md:hidden bg-gray-400 dark:bg-gray-900 rounded-lg hover:border-2">
+                <div className="md:hidden bg-gray-300 dark:bg-gray-900 rounded-lg ">
                     <button onClick={() => setMenuOpen((prev) => !prev)}>
                         {menuOpen ? (
                             <XMarkIcon className="h-6 w-6 text-soft-teal"/>
