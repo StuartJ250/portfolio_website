@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-
+import logo from '../assets/logos/SJLogo2.png'
 import {MoonIcon, SunIcon, Bars3Icon, XMarkIcon} from "@heroicons/react/16/solid";
 
 const Navbar = () => {
@@ -29,7 +29,7 @@ const Navbar = () => {
             <div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
                 {/* Logo Link */}
                 <a href="#top" className=" text-sm md:text-4xl font-extrabold text-soft-teal dark:text-soft-teal">
-                    <img src="src/assets/logos/SJLogo2.png"
+                    <img src={logo}
                     alt="Logo"
                     className="rounded-full h-10 md:h-20 w-auto object-contain" />
                 </a>
