@@ -1,5 +1,5 @@
 import React from 'react'
-import profileImage from "../assets/images/profileImage.jpg"
+import profileImage from "../assets/images/profileImage2.jpg"
 import { motion, useInView } from 'framer-motion'
 import { useRef } from "react";
 
